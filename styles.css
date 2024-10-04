@@ -1,0 +1,306 @@
+/*---------------Global Style------------------------*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+}
+
+.wrapper {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+header {
+    background-color: #97fc97a7; /* background fallback colour */
+    padding: 20px;
+    text-align: center;
+    background-image: url("/images/koru.svg"); /* Replace with your image path */
+    background-repeat: repeat;
+    background-size: auto, auto; /* Keep original size */
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3 {
+  color: #261710;
+}
+
+/*----Nav Bar CSS-----*/
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    justify-content: space-around;
+    background-color: #6B8E23;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/*-----end Nav bar css----------*/
+
+section {
+  display: contents;
+}
+
+/*---------home page------------*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 50px; /* Optional: Adds space between grid items */
+  padding-top: 1rem;
+  margin: auto auto;
+}
+
+.grid-item {
+  background-color:  #97fc97a7;
+  padding: 20px;
+  text-align: left;
+  border-radius: 5px;
+}
+
+.statement {
+  background-color: silver;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.statement > h2, p {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.reserve-table {
+  background-color: #FFD700;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.reserve-table > h2, p {
+  text-align: center;
+  color: #261710; 
+}
+
+.reserve-table a {
+  text-align: center;
+}
+
+/*css for the testimonial carousel*/
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.slide-content {
+  background-color: lightgrey;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/*----End of Testimonial css---*/
+
+footer {
+  background-color: #A7D489;
+  background-repeat: repeat;
+  padding: 20px;
+  justify-content: space-around;
+  background-size: auto, auto; /* Keep original size */
+}
+
+.footer-logo {
+  max-width: 30%;
+  height: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px; /* Optional: Adds space between grid items */
+  padding-top: 1rem;
+  margin: auto auto;
+}
+
+.footer-grid-container > div {
+  text-align: left;
+  padding: 20px 0;
+}
+
+ul .footlinks {
+  list-style-type: none;
+  padding: 1rem;
+}
+
+.inner-grid {
+  display: inline-grid;
+  grid-template-columns: auto auto; /* Two equal columns */
+  gap: 5px; /* Space between inner grid items */
+  margin-top: 10px; /* Space above the inner grid */
+}
+
+.inner-item {
+  padding: 10px;
+}
+
+/*--------------About Us Page-----------------*/
+
+.bio-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px; /* Optional: Adds space between grid items */
+  padding-top: 1rem;
+  margin: 0 auto;
+}
+
+.bio-grid-item {
+  width: 100%;
+}
+
+.bio-grid-item > p {
+  margin-top: -4px;
+}
+
+.photo {
+  padding: 0;
+}
+
+.photo img {
+  max-width: 100%;
+}
+
+/*-----------------Our Food Page--------------*/
+
+.foodgrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 columns */
+  gap: 10px; /* Adds space between grid items */
+  padding-top: 1rem;
+  margin: 0 auto;
+}
+
+.foodgrid-item {
+  display: flex;
+  flex-direction: column; /* Stack the inner items vertically */
+  justify-content: flex-start; /* Align everything to the top */
+}
+
+.foodgrid-img > img {
+  object-fit: cover;  
+}
+
+.foodgrid-item > h3 {
+  margin: 0;
+  padding: 0;
+  min-height: 100px; /* Set a minimum height for headings */
+}
+
+/*----------------media queries for responsive design on smaller screens-----------*/
+
+@media (max-width: 768px) {
+  .grid-container, 
+  .bio-grid, 
+  .foodgrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
+
+   .wrapper {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .foodgrid {
+    grid-template-columns: 1fr; /* 1 column */
+  }
+}
+
+@media (max-width: 992px) {
+  .foodgrid {
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+  }
+}
+
+@media (max-width: 1250px) {
+  .foodgrid-item > h3 {
+    min-height: 120px; 
+  }
+}
